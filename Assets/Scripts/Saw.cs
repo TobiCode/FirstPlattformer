@@ -9,24 +9,26 @@ public class Saw : MonoBehaviour {
     public float PosX2;
     public float PosY2;
 
-    private bool moveToPos2;
-    private bool moveToPos1;
+    public bool moveToPos2;
+    public bool moveToPos1;
 
     public float movSpeed;
 
 
     // Use this for initialization
     void Start () {
-        PosX1 = gameObject.transform.position.x;
-        PosY1 = gameObject.transform.position.y;
+        PosX1 = transform.position.x;
+        PosY1 = transform.position.y;
 
         moveToPos2 = true;
         moveToPos1 = false;
 	}
 	
 	// Update is called once per frame
-	void Update () {
-
+	void FixedUpdate () {
+        Debug.Log("Pos X1: " + PosX1);
+        Debug.Log("Pos X2: " + PosX2);
+        Debug.Log("Bool MoveToPos: " + moveToPos2);
         if (moveToPos2 == true)
         {
             //moove to Pos2
@@ -35,6 +37,7 @@ public class Saw : MonoBehaviour {
             {
                 moveToPos2 = false;
                 moveToPos1 = true;
+                
             }
         }
         if(moveToPos1 == true)

@@ -24,7 +24,7 @@ public class CatController : MonoBehaviour {
 
 
         //move towards the player
-        if (Vector3.Distance(transform.position, target.position) > 5f)
+        if (Vector3.Distance(transform.position, target.position) > 7f)
         {//move if distance from target is greater than 1
             anim.SetFloat("speed", 2);
             transform.Translate(new Vector3(speed * Time.deltaTime, 0, 0));
