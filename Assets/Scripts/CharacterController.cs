@@ -29,6 +29,8 @@ public class CharacterController : MonoBehaviour {
 
     //UI GameOver
     public GameObject GameOver;
+    //Firework
+    public GameObject firework;
 
    
 
@@ -77,6 +79,11 @@ public class CharacterController : MonoBehaviour {
             //GameOver.enabled = true;
             GameOver.SetActive(true);
          }
+
+        if(transform.position.y < -120)
+        {
+            GameOver.SetActive(true);
+        }
 
         
 
@@ -192,6 +199,12 @@ public class CharacterController : MonoBehaviour {
                 //Activate CatController
                 catContoller.enabled = true;
             }
+        }
+
+        if(collision.gameObject.tag.ToString() == "Goal")
+        {
+            freeze = true;
+            firework.SetActive(true);
         }
        
        

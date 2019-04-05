@@ -8,6 +8,7 @@ TagManager:
   - Cat
   - Obstacle
   - Ninja
+  - Goal
   layers:
   - Default
   - TransparentFX

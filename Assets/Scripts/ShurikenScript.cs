@@ -44,7 +44,7 @@ public class ShurikenScript : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D collision)
     {
         collided = true;
-        if (time > 10)
+        if (time > 5)
         {
             Destroy(gameObject);
         }
